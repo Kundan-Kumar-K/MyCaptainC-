@@ -3,15 +3,18 @@ using namespace std;
 
 int Prime(int num)
 {
-    int div=0;
-    for(int i=1;i<=num;i++)
+    int i,d=2,r;
+    if (num==2)
+    return 1;
+    for (i=2; i<=num/2; i++)
     {
-        if(num%i==0)
-            div++;                
+        r = num%i;
+        if (r==0)
+        {
+            return 0;
+        }
     }
-    if(div==2)
-        return 1;
-    return 0;
+    return 1;
 }
 
 int main()
