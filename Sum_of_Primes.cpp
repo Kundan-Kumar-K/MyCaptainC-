@@ -3,7 +3,7 @@ using namespace std;
 
 int Prime(int num)
 {
-    int i,d=2,r;
+    int i,r;
     if (num==2)
     return 1;
     for (i=2; i<=num/2; i++)
