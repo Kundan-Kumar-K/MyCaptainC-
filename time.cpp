@@ -6,7 +6,6 @@ class time
 {
     private:
     int h,m,s;
-    char s1[7];
 
     public:
     int hours(int a)
@@ -29,40 +28,31 @@ class time
 
     void strng(int p, int q,int r)
     {
-        s1[2] = ':';
-        s1[5] = ':';
+        cout<<"The time is = ";
         if (p<10)
         {
-            s1[0] = '0';
-            s1[1] = p;
+            cout<<"0"<<p<<":";
         }
         else
         {
-            s1[0,1] = p;
+            cout<<p<<":";
         }
         if (q<10)
         {
-            s1[3] = '0';
-            s1[4] = q;
+            cout<<"0"<<q<<":";
         }
         else
         {
-            s1[3,4] = q;
+            cout<<q<<":";
         }
         if (r<10)
         {
-            s1[6] = '0';
-            s1[7] = r;
+            cout<<"0"<<r<<endl;
         }
         else
         {
-            s1[6,7] = r;
+            cout<<r<<endl;
         }
-    }
-
-    void displayseconds()
-    {
-        cout<<"The time is = "<<s1<<endl;
         cout<<"Time in total seconds: "<<h+m+s<<endl;
     }
 };
@@ -81,5 +71,6 @@ int main()
     t.hours(h);
     t.minutes(m);
     t.seconds(s);
-    t.displayseconds();
+    t.strng(h,m,s);
+    return 0;
 }
